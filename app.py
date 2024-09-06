@@ -63,14 +63,6 @@ def process_instagram_url_api():
     response = process_instagram_url(sessionId, url)
     return jsonify(response)  # Return the response as JSON
 
-@app.route('/', methods=['POST'])
+@app.route('/')
 def process_instagram_url_api():
-    data = request.get_json()  # Get the request body as JSON
-    sessionId = data.get('sessionId', "")
-    url = data.get('url')
-
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
-
-    response = process_instagram_url(sessionId, url)
-    return jsonify(response)  # Return the response as JSON
+    return "server running" 
