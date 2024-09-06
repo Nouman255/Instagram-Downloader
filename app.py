@@ -63,6 +63,7 @@ def process_instagram_url_api():
     response = process_instagram_url(sessionId, url)
     return jsonify(response)  # Return the response as JSON
 
+
 @app.route('/')
-def process_instagram_url_api():
-    return "server running" 
+def checkServer():
+    return "server running"
